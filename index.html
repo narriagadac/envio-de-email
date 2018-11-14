@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	
+	<meta charset="UTF-8">
+	<title>Envío de Email </title>
+</head>
+<body>
+	<div id="general">
+
+		<div id="contenido">
+		<h1>Envío de Email </h1>
+			
+			<div id="errorEnvio"></div>
+
+			NOMBRE  :<br>	
+			<input class="form-control" type="text" id="nombre" placeholder="Nombre Completo" onKeyPress="return soloNumeros(event)"><br><br>
+
+			RUT  :<br>	
+			<input class="form-control" type="text" id="rut"  required oninput="checkRut(this)" placeholder="Ingrese RUT"><br><br>
+
+			EMAIL  :<br>	
+			<input class="form-control" type="text" id="email" name="email" placeholder="Correo Electronico" 
+				   onkeyup="validarEmail(this)"><a id='resultado'></a><br>
+										
+
+			TELEFONO  :<br>	
+			<input class="form-control" type="tel" id="telefono" placeholder="+56 9 xxxxxxxx"><br><br>
+
+			MENSAJE  :<br>	
+			
+			<textarea class="form-control" name="mensaje" rows="4" cols="40" id="mensaje" class="mensaje1" maxlength="200" placeholder="Escribe aquí tu mensaje (max:200 caracteres)"></textarea><br><br>
+					
+
+			<input type="button" class="btn btn-primary" value="Enviar" onclick="enviar()">
+			<input type="button" class="btn btn-primary1" value="limpiar" onclick="limpiar()">
+			<br><br>
+
+				
+		
+		</div>
+	
+
+		
+</body>
+</html>
